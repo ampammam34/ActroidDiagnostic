@@ -93,10 +93,10 @@ class ActroidDiagnostic(OpenRTM_aist.DataFlowComponentBase):
 		"""
 		"""
 		self._positionIn = OpenRTM_aist.InPort("position", self._d_position)
-		self._d_purpose = RTC.TimedDoubleSeq(RTC.Time(0,0),[])
+		self._d_target = RTC.TimedDoubleSeq(RTC.Time(0,0),[])
 		"""
 		"""
-		self._purposeOut = OpenRTM_aist.OutPort("purpose", self._d_purpose)
+		self._targetOut = OpenRTM_aist.OutPort("target", self._d_target)
 
 
 		
@@ -124,7 +124,7 @@ class ActroidDiagnostic(OpenRTM_aist.DataFlowComponentBase):
 		self.addInPort("position",self._positionIn)
 		
 		# Set OutPort buffers
-		self.addOutPort("purpose",self._purposeOut)
+		self.addOutPort("target",self._targetOut)
 		
 		# Set service provider to Ports
 		
@@ -213,58 +213,38 @@ class ActroidDiagnostic(OpenRTM_aist.DataFlowComponentBase):
 		#
 		#
 	def onExecute(self, ec_id):
-                print 'onExecute start'
-
+                #print 'onExecute start'
                 data_array = []
                 data_array2 = []
                 try:
                         global frames
-                        #print frames[0].getvalue()
-                        #frames[0].setvalue(str(frames[0].getvalue()))
-                        #self._purposeOut.write()
-                        #time.sleep(0.01)
-                        #return RTC.RTC_OK
-                
-        
-                        #global frames
+                        n = 0
+
                         for num in range(0, 24):
                                 value = frames[num].getvalue()
-                                #value = 1
-                                #data_array = [[]]*24
                                 data_array.append(value)
-                                #data_array[data_array].append(data_array)
-                                #print str(frames[value]) , str(frames[value].getvalue())
-                                #frames[value].setvalue(frames[value].getvalue())
-                                #self._purposeOut.write()
-                                #time.sleep(0.01)
-                                #return RTC.RTC_OK
-                        self._d_purpose.data = data_array
-                        print self._d_purpose
-                        self._purposeOut.write()
+
+                        self._d_target.data = data_array
+                        #print self._d_target
+                        self._targetOut.write()
                 
                         if self._positionIn.isNew():
                                 indata = self._positionIn.read()
+                                print self._d_position
                                 print "Receive %d datas" % len(indata.data)
                                 for v in indata.data:
-                                        print "Data is %d" % (v)
-                                for n in range(0, 24):
-                                        val = frames[n].getvalue()
-                                        frames[n].setvalue(val)
-                                
-                        #time.sleep(0.01)
+                                        #print "Data is %d" % (v)
+                                        frames[n].setvalue(v)
+                                        n +=1
+
+                                #for n in range(0, 24):
+                                #        frames[n].setvalue(frames[n].getvalue())
+
                         return RTC.RTC_OK
                 
                 except Exception, e:
                         print 'Exception : ', e
                         pass
-                #except IOError as err:
-                #        print("I/O error: {0}".format(err))
-                #except ValueError:
-                #        print("データが整数に変換できません")
-                #except:
-                #        print("予期せぬエラー：", sys.exc_info()[0])
-                #        raise #例外の再検出
-                return RTC.RTC_OK
 	
 		return RTC.RTC_OK
 	
