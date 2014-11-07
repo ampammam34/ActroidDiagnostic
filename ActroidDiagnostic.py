@@ -230,7 +230,7 @@ class ActroidDiagnostic(OpenRTM_aist.DataFlowComponentBase):
                 
                         if self._positionIn.isNew():
                                 indata = self._positionIn.read()
-                                print self._d_position
+                                #print self._d_position
                                 print "Receive %d datas" % len(indata.data)
                                 for v in indata.data:
                                         #print "Data is %d" % (v)
