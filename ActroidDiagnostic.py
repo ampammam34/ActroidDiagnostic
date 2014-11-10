@@ -55,7 +55,7 @@ my_tuple = (("1:Eyebrows up&down  ",0,255),
             ("17:right arm open   ",0,57),#R2
             ("18:right upper arm  ",0,90),#R3
             ("19:right elbow      ",0,112),#R4
-            ("20:right forearm    ",-90,90),#R5
+            ("20:right forearm    ",-90,90),#R5   #[deg]表示
             ("21:right hand length",0,255),
             ("22:right hand side  ",0,255),
             ("23:Body front&back  ",0,255),
