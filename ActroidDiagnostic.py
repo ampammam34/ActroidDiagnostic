@@ -44,18 +44,18 @@ my_tuple = (("1:Eyebrows up&down  ",0,255),
             ("6:left neck         ",0,255),
             ("7:right neck        ",0,255),
             ("8:Neck turning      ",0,255),
-            ("9:left arm up       ",0,255),
-            ("10:left arm open    ",0,255),
-            ("11:left upper arm   ",0,255),
-            ("12:left elbow       ",0,255),
-            ("13:left forearm     ",0,255),
-            ("14:left hand length ",0,255),
-            ("15:left hand side   ",0,255),
-            ("16:right arm up     ",0,255),
-            ("17:right arm open   ",0,255),
-            ("18:right upper arm  ",0,255),
-            ("19:right elbow      ",0,255),
-            ("20:right forearm    ",0,255),
+            ("9:left arm up       ",-14,130),#L1
+            ("10:left arm open    ",0,57),#L2
+            ("11:left upper arm   ",0,90),#L3
+            ("12:left elbow       ",0,112),#L4
+            ("13:left forearm     ",-90,90),#L5
+            ("14:left hand length ",-40,28),#L6
+            ("15:left hand side   ",-15,26),#L7
+            ("16:right arm up     ",-14,130),#R1
+            ("17:right arm open   ",0,57),#R2
+            ("18:right upper arm  ",0,90),#R3
+            ("19:right elbow      ",0,112),#R4
+            ("20:right forearm    ",-90,90),#R5
             ("21:right hand length",0,255),
             ("22:right hand side  ",0,255),
             ("23:Body front&back  ",0,255),
