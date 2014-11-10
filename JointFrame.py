@@ -7,7 +7,7 @@ class JointFrame(tk.Frame):
         def __init__(self,root,number,label,min_,max_,init_):
                 tk.Frame.__init__(self,root)
                 self.root = root
-                self.slider = tk.Scale(self,from_ = 255, to = 0)
+                self.slider = tk.Scale(self,from_ = max_, to = min_)
                 self.slider.set(init_)
                 row = 0
                 column = 0
@@ -33,7 +33,7 @@ class JointFrame(tk.Frame):
         
 def test():
         root = tk.Tk()
-        my_tuple = (("1:Eyebrows up&down  ",0,255,150),
+        my_tuple = (("1:Eyebrows up&down  ",0,240,150),
                     ("2:Eyelids open&shut ",0,255,150),
                     ("3:Eyes right&left   ",0,255,128),
                     ("4:Eyes up&down      ",0,255,128),
@@ -41,18 +41,18 @@ def test():
                     ("6:left neck         ",0,255,0),
                     ("7:right neck        ",0,255,150),
                     ("8:Neck turning      ",0,255,139),
-                    ("9:left arm up       ",0,255,143),
-                    ("10:left arm open    ",0,255,86),
-                    ("11:left upper arm   ",0,255,128),
-                    ("12:left elbow       ",0,255,218),
-                    ("13:left forearm     ",0,255,128),
-                    ("14:left hand length ",0,255,128),
-                    ("15:left hand side   ",0,255,128),
-                    ("16:right arm up     ",0,255,113),
-                    ("17:right arm open   ",0,255,210),
-                    ("18:right upper arm  ",0,255,0),
-                    ("19:right elbow      ",0,255,0),
-                    ("20:right forearm    ",0,255,128),
+                    ("9:left arm up       ",-14,130,0),#L1
+                    ("10:left arm open    ",0,57,25),#L2
+                    ("11:left upper arm   ",0,90,45),#L3
+                    ("12:left elbow       ",0,112,60),#L4
+                    ("13:left forearm     ",-90,90,0),#L5
+                    ("14:left hand length ",-40,28,0),#L6
+                    ("15:left hand side   ",-15,26,0),#L7
+                    ("16:right arm up     ",-14,130,0),#R1
+                    ("17:right arm open   ",0,57,50),#R2
+                    ("18:right upper arm  ",0,90,45),#R3
+                    ("19:right elbow      ",0,112,60),#R4
+                    ("20:right forearm    ",-90,90,0),#R5
                     ("21:right hand length",0,255,0),
                     ("22:right hand side  ",0,255,0),
                     ("23:Body front&back  ",0,255,60),
