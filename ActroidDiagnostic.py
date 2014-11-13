@@ -219,13 +219,13 @@ class ActroidDiagnostic(OpenRTM_aist.DataFlowComponentBase):
                 try:
                         global frames
                         n = 0
-                        i = 0.0174532925
+                        x = 0.0174532925
                         
                         for num in range(0, 24):
                                 value = frames[num].getvalue()
-                                data_array.append(value)
+                                data_array.append(value*x)
                         #self._d_target.data = data_array
-                        self._d_target.data = data_array*i #[deg]から[rad]に変換
+                        self._d_target.data = data_array #[deg]から[rad]に変換
                         print self._d_target
                         self._targetOut.write()
                 
