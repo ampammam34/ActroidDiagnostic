@@ -219,13 +219,13 @@ class ActroidDiagnostic(OpenRTM_aist.DataFlowComponentBase):
                 try:
                         global frames
                         n = 0
-                        x = 0.0174532925
+                        x = 0.0174532925 #[deg]にこの値をかけたら[rad]に変換できる
                         
                         for num in range(0, 24):
                                 value = frames[num].getvalue()
-                                data_array.append(value*x)
+                                data_array.append(value*x) #[deg]から[rad]に変換
                         #self._d_target.data = data_array
-                        self._d_target.data = data_array #[deg]から[rad]に変換
+                        self._d_target.data = data_array #これは文字列(ここで*xしたらlengthがx倍されるだけ)
                         print self._d_target
                         self._targetOut.write()
                 
