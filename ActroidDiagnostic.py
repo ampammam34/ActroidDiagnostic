@@ -219,7 +219,7 @@ class ActroidDiagnostic(OpenRTM_aist.DataFlowComponentBase):
                 try:
                         global frames
                         n = 0
-                        x = 0.0174532925 #[deg]にこの値をかけたら[rad]に変換できる
+                        x = 0.0174 #532925 #[deg]にこの値をかけたら[rad]に変換できる
                         
                         for num in range(0, 24):
                                 value = frames[num].getvalue()
