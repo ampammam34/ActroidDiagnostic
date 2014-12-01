@@ -39,24 +39,24 @@ def test():
                     ("3:Eyes up&down      ",0,255,128),
                     ("4:Mouth open&shut   ",0,255,0),
                     ("5:left neck         ",0,255,0),
-                    ("6:right neck        ",0,255,150),
-                    ("7:Neck turning      ",0,255,139),
+                    ("6:right neck        ",0,255,200),
+                    ("7:Neck turning      ",0,255,0),
                     ("8:left arm up       ",-14,130,0),#L1
-                    ("9:left arm open    ",0,56,19),#L2
+                    ("9:left arm open    ",0,56,40),#L2
                     ("10:left upper arm   ",0,90,45),#L3
                     ("11:left elbow       ",0,112,0),#L4
                     ("12:left forearm     ",-90,90,0),#L5
                     ("13:left hand length ",-40,28,-6),#L6
-                    ("14:left hand side   ",-15,26,5),#L7
-                    ("15:right arm up     ",-14,130,0),#R1
+                    ("14:left hand side   ",-15,25,5),#L7
+                    ("15:right arm up     ",-14,130,130),#R1
                     ("16:right arm open   ",0,56,50),#R2
                     ("17:right upper arm  ",0,90,0),#R3
                     ("18:right elbow      ",0,112,0),#R4
                     ("19:right forearm    ",-90,90,-90),#R5
                     ("20:right hand length",0,255,0),
                     ("21:right hand side  ",0,255,0),
-                    ("22:Body front&back  ",0,255,60),
-                    ("23:Body turning     ",0,255,146))
+                    ("22:Body front&back  ",0,255,255),
+                    ("23:Body turning     ",0,255,155))
         frames =[]
         
         row = 0
