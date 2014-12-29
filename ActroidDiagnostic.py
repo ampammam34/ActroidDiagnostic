@@ -36,30 +36,30 @@ frames = []
 # This module's spesification
 # <rtc-template block="module_spec">
 
-my_tuple = (("0:Eyebrows up&down  ",0,255),
-            ("1:Eyelids open&shut ",0,255),
-            ("2:Eyes right&left   ",0,255),
-            ("3:Eyes up&down      ",0,255),
-            ("4:Mouth open&shut   ",0,255),
-            ("5:left neck         ",0,255),
-            ("6:right neck        ",0,255),
-            ("7:Neck turning      ",0,255),
-            ("8:left arm up       ",-14,130),#L1
-            ("9:left arm open     ",0,56),#L2
-            ("10:left upper arm   ",0,90),#L3
-            ("11:left elbow       ",0,112),#L4
-            ("12:left forearm     ",-90,90),#L5
-            ("13:left hand length ",-40,28),#L6
-            ("14:left hand side   ",-15,25),#L7
-            ("15:right arm up     ",-14,130),#R1
-            ("16:right arm open   ",0,56),#R2
-            ("17:right upper arm  ",0,90),#R3
-            ("18:right elbow      ",0,112),#R4
-            ("19:right forearm    ",-90,90),#R5   #[deg]表示
-            ("20:right hand length",0,255),
-            ("21:right hand side  ",0,255),
-            ("22:Body front&back  ",0,255),
-            ("23:Body turning     ",0,255))
+my_tuple = (("1:Eyebrows up&down  ",0,255),
+            ("2:Eyelids open&shut ",0,255),
+            ("3:Eyes right&left   ",0,255),
+            ("4:Eyes up&down      ",0,255),
+            ("5:Mouth open&shut   ",0,255),
+            ("6:left neck         ",0,255),
+            ("7:right neck        ",0,255),
+            ("8:Neck turning      ",0,255),
+            ("9:left arm up       ",-14,130),#L1
+            ("10:left arm open     ",0,56),#L2
+            ("11:left upper arm   ",0,90),#L3
+            ("12:left elbow       ",0,112),#L4
+            ("13:left forearm     ",-90,90),#L5
+            ("14:left hand length ",-40,28),#L6
+            ("15:left hand side   ",-15,25),#L7
+            ("16:right arm up     ",-14,130),#R1
+            ("17:right arm open   ",0,56),#R2
+            ("18:right upper arm  ",0,90),#R3
+            ("19:right elbow      ",0,112),#R4
+            ("20:right forearm    ",-90,90),#R5   #[deg]表示
+            ("21:right hand length",0,255),
+            ("22:right hand side  ",0,255),
+            ("23:Body front&back  ",0,255),
+            ("24:Body turning     ",0,255))
 
 
 actroiddiagnostic_spec = ["implementation_id", "ActroidDiagnostic", 
